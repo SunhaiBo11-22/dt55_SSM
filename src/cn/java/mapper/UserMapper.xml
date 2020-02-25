@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.java.mapper.UserMapper">
+
+	<select id="getUserByUser" resultType="cn.java.entity.User">
+		select * from User where (phonenumber=#{username} or username=#{username}  ) and password= #{password} 
+	</select>
+	
+	<insert id="registerMapper" parameterType="cn.java.entity.User">
+		insert into User(username,phonenumber,password) values (#{username},#{phonenumber},#{password})
+	</insert>
+	
+	<select id="getUserByUsername" resultType="cn.java.entity.User">
+		select * from User where username=#{username}
+	</select>
+	
+	<select id="getUserByUserphone" resultType="cn.java.entity.User">
+		select * from User where phonenumber=#{phonenumber}
+	</select>
+</mapper>
