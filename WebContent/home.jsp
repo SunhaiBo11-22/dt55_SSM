@@ -166,7 +166,7 @@
 								<div class="m-baseinfo" id="personalChage">
 									<a > <img src="<%= basePath %>images/getAvatar.do.jpg"></a> 
 									<em> 
-										<span class="s-name">${sessionScope.username}</span>
+										<span class="s-name">${sessionScope.user.username}</span>
 										<a ><p>用户信息</p></a>
 									</em>
 								</div>

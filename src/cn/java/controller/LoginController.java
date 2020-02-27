@@ -25,7 +25,9 @@ public class LoginController {
 	@RequestMapping("/login")
 	public String login(User user,HttpServletRequest request, HttpServletResponse response,Model model) {
 		HttpSession session = request.getSession();
+		session.setMaxInactiveInterval(10800);
 		User list = service.isLogin(user);
+		System.out.println(user.toString());
 		if (list==null) {
 			model.addAttribute("errorname", "密码或者用户名错误");
 			return "Login";
@@ -38,7 +40,7 @@ public class LoginController {
 				}
 			}
 			model.addAttribute("typeList", typeList);
-			session.setAttribute("username", list.getUsername());
+			session.setAttribute("user", list);
 			return "home";
 		}
 	}
