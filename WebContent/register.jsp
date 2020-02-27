@@ -55,7 +55,7 @@
 						<div class="am-tabs-bd">
 							<div class="am-tab-panel am-active">
 								
-								<form action="${pageContext.request.contextPath}/LoginController/register.do" method="post" >
+								<form action="${pageContext.request.contextPath}/LoginController/register.do" method="post" enctype="multipart/form-data" >
 									<div class="user-pass">
 										<label for="password"><i class="am-icon-lock"></i></label> 
 										<input type="text" name="username" id="username" placeholder="设置用户名(只允许中文)"  onkeyup="name_check(this)" required="required">
@@ -87,28 +87,6 @@
 				</div>
 			</div>
 
-			<!-- <div class="footer ">
-						<div class="footer-hd ">
-							<p>
-								<a href="# ">恒望科技</a>
-								<b>|</b>
-								<a href="# ">商城首页</a>
-								<b>|</b>
-								<a href="# ">支付宝</a>
-								<b>|</b>
-								<a href="# ">物流</a>
-							</p>
-						</div>
-						<div class="footer-bd ">
-							<p>
-								<a href="# ">关于恒望</a>
-								<a href="# ">合作伙伴</a>
-								<a href="# ">联系我们</a>
-								<a href="# ">网站地图</a>
-								<em>© 2015-2025 Hengwang.com 版权所有</em>
-							</p>
-						</div>
-				</div> -->
 		</div>
 	</div>
 </body>

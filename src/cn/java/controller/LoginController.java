@@ -1,11 +1,17 @@
 package cn.java.controller;
 
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.java.entity.Producttype;
 import cn.java.entity.User;
 import cn.java.service.LoginService;
 
@@ -17,15 +23,24 @@ public class LoginController {
 	private LoginService service;
 	
 	@RequestMapping("/login")
-	public String login(User user,Model model) {
-		if (user.getUsername() == "") {
-			return "Login";
-		}
-		if (!service.isLogin(user)) {
+	public String login(User user,HttpServletRequest request, HttpServletResponse response,Model model) {
+		HttpSession session = request.getSession();
+		User list = service.isLogin(user);
+		if (list==null) {
 			model.addAttribute("errorname", "密码或者用户名错误");
 			return "Login";
+		}else {
+			List<Producttype> typeList = service.getHomeAllProduct();
+			for (Producttype a : typeList) {
+				System.out.println(a.toString());
+				for (Producttype b : a.getList()) {
+					System.out.println("\t"+b.toString());
+				}
+			}
+			model.addAttribute("typeList", typeList);
+			session.setAttribute("username", list.getUsername());
+			return "home";
 		}
-		return "index";
 	}
 	
 	@RequestMapping("/register")
