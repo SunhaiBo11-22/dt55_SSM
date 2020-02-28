@@ -1,4 +1,4 @@
-package cn.java.controller;
+package cn.java.controller.home;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class LoginController {
 		System.out.println(user.toString());
 		if (list==null) {
 			model.addAttribute("errorname", "密码或者用户名错误");
-			return "Login";
+			return "home/Login";
 		}else {
 			List<Producttype> typeList = service.getHomeAllProduct();
 			for (Producttype a : typeList) {
@@ -39,9 +39,9 @@ public class LoginController {
 					System.out.println("\t"+b.toString());
 				}
 			}
-			model.addAttribute("typeList", typeList);
+			session.setAttribute("typeList", typeList);
 			session.setAttribute("user", list);
-			return "home";
+			return "home/home";
 		}
 	}
 	
@@ -51,15 +51,15 @@ public class LoginController {
 		if (service.isUsernameExistence(user)) {
 			model.addAttribute("user",user);
 			model.addAttribute("isType",1);
-			return "register";
+			return "home/register";
 		}
 		if (service.isUserphoneExistence(user)) {
 			model.addAttribute("user",user);
 			model.addAttribute("isType",2);
-			return "register";
+			return "home/register";
 		}
 		service.registerService(user);
-		return "HaveUser";
+		return "home/HaveUser";
 	}
 	
 }

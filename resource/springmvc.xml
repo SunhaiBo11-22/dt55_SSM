@@ -14,7 +14,7 @@
 	   		http://www.springframework.org/schema/task/spring-task-4.2.xsd">
 	   		
 	   		<!-- 扫描包 -->
-	   		<context:component-scan base-package="cn.java.controller"></context:component-scan>
+	   		<context:component-scan base-package="cn.java.controller.*"></context:component-scan>
 	   		
 	   		<!-- 开启mvc注解 -->
 	   		<mvc:annotation-driven></mvc:annotation-driven>
@@ -22,7 +22,7 @@
 	   		<!-- 视图解析器 -->
 	   		<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	   			<!-- 配置前缀 -->
-	   			<property name="prefix" value="/"></property>
+	   			<property name="prefix" value="/WEB-INF/jsp/"></property>
 	   			<!-- 配置后缀 -->
 	   			<property name="suffix" value=".jsp"></property>
 	   		</bean>

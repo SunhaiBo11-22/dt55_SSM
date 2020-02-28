@@ -164,11 +164,8 @@
 					<div class="demo">
 						<div class="mod-vip">
 								<div class="m-baseinfo" id="personalChage">
-									<a > <img src="<%= basePath %>images/getAvatar.do.jpg"></a> 
-									<em> 
-										<span class="s-name">${sessionScope.user.username}</span>
-										<a ><p>用户信息</p></a>
-									</em>
+									<img class="am-circle am-img-thumbnail" src="/img/${sessionScope.user.phonenumber}.png" alt="未上传头像"  style="width: 100px;height: 100px">
+									<a>${sessionScope.user.username}</a> 
 								</div>
 								<div class="member-logout">
 									<button class="am-btn-warning btn" onclick="personalMl()">用户中心</button>

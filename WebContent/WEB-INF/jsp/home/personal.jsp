@@ -59,6 +59,11 @@
 		<div class="long-title">
 			<span class="all-goods">全部分类</span>
 		</div>
+		<div class="nav-cont">
+			<ul>
+				<li class="index"><a href="PersonalController/backHome.do">首页</a></li>
+			</ul>
+		</div>
 	</div>
 	<b class="line"></b>
 	<div class="center">
@@ -78,7 +83,7 @@
 					<div class="user-infoPic">
 
 						<div class="filePic">
-							<img class="am-circle am-img-thumbnail" src="" alt="" />
+							<img class="am-circle am-img-thumbnail" style="width: 100px;height: 100px" src="/img/${user.phonenumber}.png" alt="未上传头像"/>
 						</div>
 
 						<p class="am-form-help">头像</p>

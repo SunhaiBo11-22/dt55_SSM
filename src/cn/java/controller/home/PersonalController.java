@@ -1,4 +1,4 @@
-package cn.java.controller;
+package cn.java.controller.home;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,6 +31,12 @@ public class PersonalController {
 	@Autowired
 	private PersonalService personal;
 	
+	@RequestMapping("/backHome")
+	public String backHome() {
+		return "home/home";
+		
+	}
+	
 	
 	@RequestMapping(value="/updateFile",method=RequestMethod.POST)
 	public String updateFile(HttpServletRequest request,HttpSession session,@RequestParam("userfile") MultipartFile files,Model model) {
@@ -40,8 +46,6 @@ public class PersonalController {
 		System.out.println(user.toString());
 		String filename = user.getPhonenumber()+".png" ;
 		System.out.println(filename);
-		FileInputStream ins =null;
-		FileOutputStream out = null;
 		try {
 			FileUtils.copyInputStreamToFile( file.getInputStream(),new File(servePath+"/"+filename));
 		} catch (IOException e) {
@@ -49,7 +53,7 @@ public class PersonalController {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		return "index";
+		return "home/personal";
 	}
 	
 	@RequestMapping("/address")
@@ -57,7 +61,7 @@ public class PersonalController {
 		User user = (User) session.getAttribute("user");
 		List<Address> addresses = personal.getAllAddressByUser(user);
 		session.setAttribute("addresses", addresses);
-		return "address";
+		return "home/address";
 	}
 	
 	
@@ -67,7 +71,7 @@ public class PersonalController {
 		personal.addAddressInUser(province, city, dist , street, userName, Integer.parseInt(userPhone) ,user.getId());
 		List<Address> addresses = personal.getAllAddressByUser(user);
 		session.setAttribute("addresses", addresses);
-		return "address";
+		return "home/address";
 	}
 	
 	
@@ -77,6 +81,6 @@ public class PersonalController {
 		personal.deleteAddressById(id);
 		List<Address> addresses = personal.getAllAddressByUser(user);
 		session.setAttribute("addresses", addresses);
-		return "address";
+		return "home/address";
 	}
 }

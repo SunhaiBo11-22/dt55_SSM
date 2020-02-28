@@ -61,6 +61,11 @@
 		<div class="long-title">
 			<span class="all-goods">全部分类</span>
 		</div>
+		<div class="nav-cont">
+			<ul>
+				<li class="index"><a href="PersonalController/backHome.do">首页</a></li>
+			</ul>
+		</div>
 	</div>
 	<b class="line"></b>
 	<div class="center">
