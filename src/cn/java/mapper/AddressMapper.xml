@@ -4,4 +4,14 @@
 	<select id="getAllAddressMapper" resultType="cn.java.entity.Address">
 		select * from address where userid = #{id}
 	</select>
+	
+	<insert id="addAddressInUserMapper" >
+		insert into 
+		address (province, city, dist , street, userName, userPhone, userid) 
+		values (#{0},#{1},#{2},#{3},#{4},#{5},#{6})
+	</insert>
+	
+	<delete id="deleteAddressByIdMapper">
+		delete from address where id = #{0}
+	</delete>
 </mapper>

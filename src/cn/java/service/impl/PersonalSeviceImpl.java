@@ -21,6 +21,17 @@ public class PersonalSeviceImpl implements PersonalService {
 		return mapper.getAllAddressMapper(user);
 	}
 
+	@Override
+	public void addAddressInUser(String province, String city, String dist, String street, String userName,
+			int userPhone, Integer userid) {
+		mapper.addAddressInUserMapper(province, city, dist , street, userName,userPhone, userid);
+	}
+
+	@Override
+	public void deleteAddressById(String id) {
+		mapper.deleteAddressByIdMapper(id);
+	}
+
 	
 	
 }

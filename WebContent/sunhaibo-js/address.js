@@ -426,3 +426,8 @@ function _init_area(){  //初始化函数
 //	var phone = $(" input[ name='phone' ] ").val();
 //	return true;
 //}
+
+function deleteAddress(obj) {
+	var id = obj;
+	window.location.href="PersonalController/deleteAddress.do?id="+id;	
+}

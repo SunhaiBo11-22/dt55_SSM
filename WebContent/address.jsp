@@ -76,8 +76,8 @@
 							<c:forEach var="address" items="${sessionScope.addresses}">
 								<li class="user-addresslist">
 									<p class="new-tit new-p-re">
-										<span class="new-txt">${address.name }</span>
-										<span class="new-txt-rd2">${address.phone}</span>
+										<span class="new-txt">${address.userName }</span>
+										<span class="new-txt-rd2">${address.userPhone}</span>
 									</p>
 									<div class="new-mu_l2a new-p-re">
 										<p class="new-mu_l2cw">
@@ -88,7 +88,7 @@
 											<span class="street">${address.street}</span></p>
 									</div>
 									<div class="">
-										<button>删除</button>
+										<button type="button" onclick="deleteAddress(${address.id})">删除</button>
 									</div>
 								</li>
 							</c:forEach>
@@ -113,14 +113,14 @@
 										<div class="am-form-group">
 											<label for="user-name" class="am-form-label">收货人</label>
 											<div class="am-form-content">
-												<input type="text" id="user-name" name="name" placeholder="收货人">
+												<input type="text" id="user-name" name="userName" placeholder="收货人">
 											</div>
 										</div>
 
 										<div class="am-form-group">
 											<label for="user-phone" class="am-form-label">手机号码</label>
 											<div class="am-form-content">
-												<input type="text" id="user-name" name="phone" placeholder="电话号">
+												<input type="text" id="user-name" name="userPhone" placeholder="电话号">
 											</div>
 										</div>
 										<div class="am-form-group">

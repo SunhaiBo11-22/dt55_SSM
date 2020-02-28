@@ -62,11 +62,19 @@ public class PersonalController {
 	
 	
 	@RequestMapping("/addtheAddress")
-	public String addAddress(Address address,HttpSession session,Model model) {
+	public String addAddress(HttpSession session,Model model,String province, String city, String dist ,String street,String userName,String userPhone) {
 		User user = (User) session.getAttribute("user");
-		System.out.println(address.toString());
-		
-		
+		personal.addAddressInUser(province, city, dist , street, userName, Integer.parseInt(userPhone) ,user.getId());
+		List<Address> addresses = personal.getAllAddressByUser(user);
+		session.setAttribute("addresses", addresses);
+		return "address";
+	}
+	
+	
+	@RequestMapping("/deleteAddress")
+	public String deleteAddress(HttpSession session,Model model,String id) {
+		User user = (User) session.getAttribute("user");
+		personal.deleteAddressById(id);
 		List<Address> addresses = personal.getAllAddressByUser(user);
 		session.setAttribute("addresses", addresses);
 		return "address";

@@ -11,9 +11,9 @@ public class Address {
 
     private String street;
 
-    private String name;
+    private String userName;
 
-    private Integer phone;
+    private Integer userPhone;
 
     private Integer userid;
 
@@ -57,21 +57,6 @@ public class Address {
         this.street = street == null ? null : street.trim();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public Integer getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Integer phone) {
-        this.phone = phone;
-    }
 
     public Integer getUserid() {
         return userid;
@@ -81,11 +66,25 @@ public class Address {
         this.userid = userid;
     }
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public Integer getUserPhone() {
+		return userPhone;
+	}
+
+	public void setUserPhone(Integer userPhone) {
+		this.userPhone = userPhone;
+	}
+
 	@Override
 	public String toString() {
 		return "Address [id=" + id + ", province=" + province + ", city=" + city + ", dist=" + dist + ", street="
-				+ street + ", name=" + name + ", phone=" + phone + ", userid=" + userid + "]";
+				+ street + ", userName=" + userName + ", userPhone=" + userPhone + ", userid=" + userid + "]";
 	}
-    
-    
 }
