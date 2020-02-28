@@ -40,7 +40,7 @@ public class LoginController {
 				}
 			}
 			session.setAttribute("typeList", typeList);
-			session.setAttribute("user", list); 
+			session.setAttribute("user", list);
 			return "home/home";
 		}
 	}
