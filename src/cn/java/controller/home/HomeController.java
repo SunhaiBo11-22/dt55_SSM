@@ -20,4 +20,9 @@ public class HomeController {
 		session.setAttribute("fileName", filename);
 		return "home/personal";
 	}
+	
+	@RequestMapping("queryIt")
+	public String queryIt() {
+		return "home/search";
+	}
 }
