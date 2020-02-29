@@ -62,6 +62,8 @@ public class LoginController {
 		return "home/HaveUser";
 	}
 	
+	
+	
 	@RequestMapping("/toRegister")
 	public String toRegister() {
 		return "home/register";
