@@ -12,6 +12,14 @@ import cn.java.entity.User;
 @RequestMapping("/HomeController")
 public class HomeController {
 	
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		
+		session.invalidate();
+		return "home/Login";
+	}
+	
+	
 	@RequestMapping("/personal")
 	public String personal(Model model,HttpSession session)	{
 		User user = (User) session.getAttribute("user");

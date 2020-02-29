@@ -66,9 +66,10 @@ public class PersonalController {
 	
 	
 	@RequestMapping("/addtheAddress")
-	public String addAddress(HttpSession session,Model model,String province, String city, String dist ,String street,String userName,String userPhone) {
+	public String addAddress(HttpSession session,Model model,Address address) {
 		User user = (User) session.getAttribute("user");
-		personal.addAddressInUser(province, city, dist , street, userName, Integer.parseInt(userPhone) ,user.getId());
+		address.setUserid(user.getId());
+		personal.addAddressInUser(address);
 		List<Address> addresses = personal.getAllAddressByUser(user);
 		session.setAttribute("addresses", addresses);
 		return "home/address";

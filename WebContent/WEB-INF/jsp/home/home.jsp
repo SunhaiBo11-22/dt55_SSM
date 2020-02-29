@@ -168,8 +168,9 @@
 									<a>${sessionScope.user.username}</a> 
 								</div>
 								<div class="member-logout">
-									<button class="am-btn-warning btn" onclick="personalMl()">用户中心</button>
-									<button class="am-btn-warning btn">注销</button>
+									<button class="am-btn-warning btn" type="button" onclick="personalMl()">用户中心</button>
+									
+									<button class="am-btn-warning btn" type="button" onclick="logout()" >注销</button>
 								</div>
 
 								<div class="clear"></div>

@@ -60,7 +60,7 @@
 
 					<div class="login-links">
 						<label for="remember-me"></label> <a href="#" class="am-fr">忘记密码</a> 
-						<a href="LoginController/toRegister.do" class="zcnext am-fr am-btn-default">注册</a> <br />
+						<a href="LoginController/toRegister.do" class="zcnext am-fr am-btn-default">注册</a> <br/>
 					</div>
 
 				</div>

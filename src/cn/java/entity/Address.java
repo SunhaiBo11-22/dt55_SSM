@@ -13,7 +13,7 @@ public class Address {
 
     private String userName;
 
-    private Integer userPhone;
+    private String userPhone;
 
     private Integer userid;
 
@@ -74,11 +74,11 @@ public class Address {
 		this.userName = userName;
 	}
 
-	public Integer getUserPhone() {
+	public String getUserPhone() {
 		return userPhone;
 	}
 
-	public void setUserPhone(Integer userPhone) {
+	public void setUserPhone(String userPhone) {
 		this.userPhone = userPhone;
 	}
 
@@ -87,4 +87,6 @@ public class Address {
 		return "Address [id=" + id + ", province=" + province + ", city=" + city + ", dist=" + dist + ", street="
 				+ street + ", userName=" + userName + ", userPhone=" + userPhone + ", userid=" + userid + "]";
 	}
+
+
 }

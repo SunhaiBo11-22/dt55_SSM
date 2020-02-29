@@ -22,9 +22,8 @@ public class PersonalSeviceImpl implements PersonalService {
 	}
 
 	@Override
-	public void addAddressInUser(String province, String city, String dist, String street, String userName,
-			int userPhone, Integer userid) {
-		mapper.addAddressInUserMapper(province, city, dist , street, userName,userPhone, userid);
+	public void addAddressInUser(Address address) {
+		mapper.addAddressInUserMapper(address);
 	}
 
 	@Override

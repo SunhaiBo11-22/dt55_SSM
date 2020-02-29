@@ -409,7 +409,7 @@ dsy.add("0_33_0",[" "]);
 dsy.add("0_33",["台北","高雄","台中","花莲","基隆","嘉义","金门","连江","苗栗","南投","澎湖","屏东","台东","台南","桃园","新竹","宜兰","云林","彰化"]);
 
 var s=["s_province","s_city","s_county"];//三个select的name
-var opt0 = ["省份","地级市","市、县级市"];//初始值
+var opt0 = ["","",""];//初始值
 function _init_area(){  //初始化函数
     for(i=0;i<s.length-1;i++){
       document.getElementById(s[i]).onchange=new Function("change("+(i+1)+")");
@@ -417,15 +417,37 @@ function _init_area(){  //初始化函数
     change(0);
 }
 
-//function checkForm() {
-//	var province = $(" input[ name='province' ] ").val();
-//	var city = $(" input[ name='city' ] ").val();
-//	var dist = $(" input[ name='dist' ] ").val();
-//	var street = $(" input[ name='street' ] ").val();
-//	var name = $(" input[ name='name' ] ").val();
-//	var phone = $(" input[ name='phone' ] ").val();
-//	return true;
-//}
+function checkForm() {
+	var province = $(" input[ name='province' ] ").val();
+	var city = $(" input[ name='city' ] ").val();
+	var dist = $(" input[ name='dist' ] ").val();
+	var street = $(" input[ name='street' ] ").val();
+	var userName = $(" input[ name='userName' ] ").val();
+	var phone = $(" input[ name='phone' ] ").val();
+	if (province == "" ||city == "" ||dist == "" ||street == "" ||userName == "" ||userPhone == "" ) {
+		alert("请将内容填写完整");
+		return false;
+	}
+	return true;
+}
+
+function name_check(obj){
+	obj.value = obj.value.replace(/[^\u4E00-\u9FA5]/g,'');
+}
+
+function isDecimal(obj){
+    // 清除"数字"和"."以外的字符
+    obj.value = obj.value.replace(/[^\d]/g,"");
+    // 验证第一个字符是数字
+    obj.value = obj.value.replace(/^\./g,"");
+    // 只保留第一个, 清除多余的
+    obj.value = obj.value.replace(/\.{2,}/g,".");
+    obj.value = obj.value.replace(".","$#$").replace(/\./g,"").replace("$#$",".");
+  }
+
+function name_check(obj){
+	obj.value = obj.value.replace(/[^\u4E00-\u9FA5]/g,'');
+}
 
 function deleteAddress(obj) {
 	var id = obj;

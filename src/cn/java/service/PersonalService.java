@@ -9,8 +9,7 @@ public interface PersonalService {
 
 	List<Address> getAllAddressByUser(User user);
 
-	void addAddressInUser(String province, String city, String dist, String street, String userName, int parseInt,
-			Integer id);
+	void addAddressInUser(Address address);
 
 	void deleteAddressById(String id);
 }

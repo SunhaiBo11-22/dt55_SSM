@@ -118,14 +118,14 @@
 										<div class="am-form-group">
 											<label for="user-name" class="am-form-label">收货人</label>
 											<div class="am-form-content">
-												<input type="text" id="user-name" name="userName" placeholder="收货人">
+												<input type="text" id="user-name" name="userName" placeholder="收货人" onkeyup="name_check(this)">
 											</div>
 										</div>
 
 										<div class="am-form-group">
 											<label for="user-phone" class="am-form-label">手机号码</label>
 											<div class="am-form-content">
-												<input type="text" id="user-name" name="userPhone" placeholder="电话号">
+												<input type="text" id="user-name" name="userPhone" placeholder="电话号" onkeyup="isDecimal(this)">
 											</div>
 										</div>
 										<div class="am-form-group">
@@ -148,7 +148,7 @@
 										</div>
 
 										<div class="am-form-group">
-											<button class="am-btn am-btn-danger" type="submit" >保存</button>
+											<button class="am-btn am-btn-danger" type="submit" onclick="return checkForm()" >保存</button>
 										</div>
 									</form>
 									<script type="text/javascript">_init_area();</script>	
