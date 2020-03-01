@@ -1,10 +1,10 @@
-package cn.java.service;
+package cn.java.mapper;
 
 import java.util.List;
 
 import cn.java.entity.Commodity;
 
-public interface HomeService {
+public interface HomeMapper {
 
 	List<Commodity> getCommdityByType(String type);
 

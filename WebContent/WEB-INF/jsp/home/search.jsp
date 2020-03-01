@@ -23,6 +23,8 @@
 
 <script type="text/javascript" src="<%= basePath %>js/basic-js/jquery-1.7.min.js"></script>
 <script type="text/javascript" src="<%= basePath %>js/script.js"></script>
+
+<script type="text/javascript" src="<%= basePath %>sunhaibo-js/search.js"></script>
 </head>
 <body>
 	<!--悬浮搜索框-->
@@ -48,15 +50,15 @@
 	<div class="search">
 		<div class="search-list">
 			<div class="nav-table">
-		<div class="long-title">
-			<span class="all-goods">全部分类</span>
-		</div>
-		<div class="nav-cont">
-			<ul>
-				<li class="index"><a href="PersonalController/backHome.do">首页</a></li>
-			</ul>
-		</div>
-	</div>
+				<div class="long-title">
+					<span class="all-goods">全部分类</span>
+				</div>
+				<div class="nav-cont">
+					<ul>
+						<li class="index"><a href="PersonalController/backHome.do">首页</a></li>
+					</ul>
+				</div>
+			</div>
 			<div class="am-g am-g-fixed">
 				<div class="am-u-sm-12 am-u-md-12">
 					<div class="search-content">
@@ -64,166 +66,25 @@
 							<li class="first"><a title="综合">综合排序</a></li>
 							<li><a title="销量">销量排序</a></li>
 							<li><a title="价格">价格优先</a></li>
-							<li class="big"><a title="评价" href="#">评价为主</a></li>
 						</div>
 						<div class="clear"></div>
 
 						<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
-							<li>
-								<div class="i-pic limit">
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
-							<li>
-								<div class="i-pic limit">
-
-									<img src="<%= basePath %>images/imgsearch1.jpg" />
-									<p class="title fl">【良品铺子旗舰店】手剥松子218g 坚果炒货零食新货巴西松子包邮</p>
-									<p class="price fl">
-										<b>¥</b> <strong>56.90</strong>
-									</p>
-									<p class="number fl">
-										销量<span>1110</span>
-									</p>
-								</div>
-							</li>
+						
+							<c:forEach items="${commodities}" var="items">
+								<li>
+									<div class="i-pic limit">
+										<img src="<%= basePath %>images/imgsearch1.jpg" style="CURSOR: hand" onclick="intoCommodity(${items.id})"/>
+										<p class="title fl">${items.comname}</p>
+										<p class="price fl">
+											<b>¥</b> <strong>${items.price}</strong>
+										</p>
+										<p class="number fl">
+											销量<span>${items.salesvolume}</span>
+										</p>
+									</div>
+								</li>
+							</c:forEach>
 						</ul>
 					</div>
 					<div class="clear"></div>

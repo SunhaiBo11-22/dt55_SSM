@@ -31,6 +31,7 @@
 
 <!-- 引入自己的外部js -->
 <script src="<%=basePath%>sunhaibo-js/personal.js"></script>
+<script src="<%=basePath%>sunhaibo-js/home.js"></script>
 </head>
 <body>
 	<div style="background-color: green">
@@ -88,7 +89,7 @@
 										<div class="category-info">
 											<h3 class="category-name b-category-name">
 												<i><img src="<%=basePath%>images/cake.png"></i>
-												<a class="ml-22" >${type1.typename}</a>
+												<a class="ml-22">${type1.typename}</a>
 											</h3><em>&gt;</em>
 										</div>
 										<div class="menu-item menu-in top">
@@ -102,7 +103,7 @@
 																</dt>
 																<c:forEach items="${type1.list}" var="type2">
 																	<dd>
-																		<a title="${type2.typename}" href="#"><span>${type2.typename}</span></a>
+																		<a title="${type2.typename}" href="javascript:void(0);" onclick="showThisType(${type2.id})"><span>${type2.typename}</span></a>
 																	</dd>
 																</c:forEach>
 															</dl>
@@ -188,22 +189,6 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<script type="text/javascript">
-					/* if ($(window).width() < 640) {
-						function autoScroll(obj) {
-							$(obj).find("ul").animate({
-								marginTop: "-39px"
-							}, 500, function() {
-								$(this).css({
-									marginTop: "0px"
-								}).find("li:first").appendTo(this);
-							})
-						}
-						$(function() {
-							setInterval('autoScroll(".demo")', 3000);
-						})
-					} */
-				</script>
 	</div>
 
 	<!--菜单侧边的菜单 -->
